@@ -1,0 +1,8 @@
+/**
+  *	This file is imported before ANY other sass/scss are processed
+  * This includes any sass/scss imported from node_modules
+  * This file is used to override vuetify vars
+  */
+  @import "~vuetify/src/styles/settings/colors";
+
+  $font-size-root: 18px;

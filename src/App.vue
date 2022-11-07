@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<v-app>
+		<v-app-bar app dark>
+			<div class="d-flex align-center">
+				<v-img alt="Logo" class="mr-2" contain width="40" src="./assets/img/logo.png" transition="scale-transition" />
+			</div>
+
+			<v-spacer></v-spacer>
+
+			<v-btn href="#" text>
+				<span class="mr-2">Clients</span>
+			</v-btn>
+		</v-app-bar>
+
+		<v-main>
+			<router-view></router-view>
+		</v-main>
+
+		<v-footer app padless>
+			<v-card class="flex" flat tile dark>
+				<v-card-text class="py-2 text-center">
+					&copy;{{ new Date().getFullYear() }} Dandi
+				</v-card-text>
+			</v-card>
+		</v-footer>
+	</v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+	export default {
+		name: "App",
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+		components: {
+		},
+
+		data: () => ({
+			//
+		}),
+	};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+	@import "./assets/css/app.scss";
 </style>
